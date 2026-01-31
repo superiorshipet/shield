@@ -1,0 +1,209 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #03818f 0%, #10B981 40%, #F8FAFC 100%);
+            background-attachment: fixed;
+            color: #1F2937;
+            text-align: right;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #10B981;
+            font-size: 2.3em;
+            font-weight: 800;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 30px;
+            font-size: 1.05em;
+        }
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        #urlInput {
+            flex-grow: 1;
+            padding: 18px;
+            border: 2px solid #D1D5DB;
+            border-radius: 12px;
+            font-size: 17px;
+            text-align: right;
+            transition: border-color 0.3s;
+        }
+        #urlInput:focus {
+            border-color: #10B981; 
+            outline: none;
+        }
+        #scanButton {
+            background-color: #059669;
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 58px;
+        }
+        #scanButton:hover {
+            background-color: #047857;
+        }
+        #scanButton:active {
+            transform: scale(0.98);
+        }
+        #scanButton:disabled {
+            background-color: #9CA3AF;
+            cursor: not-allowed;
+        }
+        .result-box {
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 25px;
+            animation: fadeIn 0.6s ease-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: none;
+        }
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .result-status {
+            font-size: 1.8em;
+            font-weight: 800;
+        }
+        .result-url {
+            font-size: 1em;
+            color: #6B7280;
+            direction: ltr;
+            text-align: left;
+            word-break: break-all;
+            margin-bottom: 15px;
+        }
+        .safe {
+            background-color: #ECFDF5; 
+            border: 3px solid #10B981; 
+        }
+        .safe .result-status {
+            color: #059669; 
+        }
+        .safe i {
+            color: #059669; 
+        }
+        .danger {
+            background-color: #FEF2F2;
+            border: 3px solid #EF4444;
+        }
+        .danger .result-status {
+            color: #DC2626;
+        }
+        .danger i {
+            color: #DC2626;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .detail-item {
+            background-color: #F3F4F6;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.95em;
+        }
+        .detail-label {
+            color: #6B7280;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .detail-value {
+            font-weight: 700;
+            color: #1F2937;
+        }
+        .warnings-list {
+            margin-top: 14px;
+            padding: 14px;
+            background-color: #FEE2F2;
+            border: 1px solid #FCA5A5;
+            border-radius: 10px;
+        }
+        .warnings-title {
+            color: #DC2626;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .warnings-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .warnings-list li {
+            color: #991B1B;
+            margin-bottom: 8px;
+            position: relative;
+            padding-right: 15px;
+        }
+        .warnings-list li::before {
+            content: '•';
+            color: #DC2626;
+            font-size: 1.2em;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        #qrButton {
+    background-color: #059669; /* نفس لون زرار الفحص */
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 58px;
+    justify-content: center;
+}
+
+#qrButton i {
+    font-size: 1.2em; /* حجم الأيقونة */
+}
+
+#qrButton:hover {
+    background-color: #047857; /* تأثير hover */
+}
+
+#qrButton:active {
+    transform: scale(0.98); /* تأثير الضغط */
+}
+
+#qrButton:disabled {
+    background-color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }

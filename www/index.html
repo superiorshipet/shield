@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AetherScan shield – حصن</title> 
+        <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+
+    <div class="container">
+        <!-- شريط علوي: شعار المؤسسة + اسمها + نوع المشروع -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:25px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+                               <div>
+                    <div style="font-weight:800; font-size:1.05em; color:#111827;">
+                    </div>
+                    <div style="font-size:0.9em; color:#6B7280;">
+                   </div>
+                </div>
+            </div>
+            <span style="background-color:#ECFDF5; color:#047857; padding:6px 14px; border-radius:999px; font-size:0.85em;">
+                مشروع أمن المعلومات
+            </span>
+        </div>
+
+        <!-- عنوان المشروع -->
+        <div style="text-align: center;">
+            <h1>
+                <i class="fas fa-satellite-dish" style="color:#059669;"></i>
+                AetherScan shield – حصن
+            </h1>
+            <p class="subtitle">أداة لفحص الروابط واكتشاف الروابط المشبوهة باستخدام تحليل البنية والمؤشرات الأمنية</p>
+        </div>
+
+        <div class="input-group">
+            <input type="url" id="urlInput" placeholder="أدخل الرابط كاملاً هنا..." />
+            <button id="scanButton"><i class="fas fa-search"></i> فحص متقدم</button>
+            <button id="qrButton" type="button">📷 مسح QR</button>
+        </div>
+<div id="qrReader" style="display:none; margin-top:15px;"></div>
+        <div id="resultBox" class="result-box"></div>
+        <!-- معلومات الفريق -->
+         
+    
+    </div>
+
+    </div>
+<script src="./assets/js/html5-qrcode.min.js"></script>
+    <script src="./index.js">
+        
+    </script>
+
+    </body>
+    </html>
